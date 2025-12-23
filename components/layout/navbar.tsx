@@ -2,6 +2,7 @@
 
 import * as React from "react"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { ModeToggle } from "@/components/theme/mode-toggle"
 import { Menu, X } from "lucide-react"
 
@@ -14,6 +15,7 @@ const navItems = [
 ] as const
 
 export function Navbar() {
+    const pathname = usePathname()
     const [isOpen, setIsOpen] = React.useState(false)
 
     // Close sidebar when clicking outside
@@ -38,15 +40,34 @@ export function Navbar() {
 
                 {/* Desktop Nav */}
                 <nav className="hidden items-center gap-8 md:flex">
-                    {navItems.map((item) => (
-                        <Link
-                            key={item.href}
-                            href={item.href}
-                            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-                        >
-                            {item.label}
-                        </Link>
-                    ))}
+                    {navItems.map((item) => {
+                        const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+                            // Only custom behavior for hash links
+                            if (item.href.startsWith("#")) {
+                                if (pathname === "/") {
+                                    e.preventDefault()
+                                    const element = document.querySelector(item.href)
+                                    if (element) {
+                                        element.scrollIntoView({ behavior: "smooth" })
+                                    }
+                                }
+                            }
+                        }
+
+                        // If not on home, prepend "/" to hash to ensure navigation works
+                        const href = pathname === "/" ? item.href : `/${item.href}`
+
+                        return (
+                            <Link
+                                key={item.href}
+                                href={href}
+                                onClick={handleClick}
+                                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                            >
+                                {item.label}
+                            </Link>
+                        )
+                    })}
                     <div className="ml-4 border-l pl-4 border-border">
                         <ModeToggle />
                     </div>

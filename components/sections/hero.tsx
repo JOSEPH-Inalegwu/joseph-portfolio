@@ -11,7 +11,7 @@ export function Hero() {
     const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`
 
     return (
-        <section id="hero" aria-labelledby="hero-heading" className="relative overflow-hidden">
+        <section id="about" aria-labelledby="hero-heading" className="relative overflow-hidden">
             {/* Theme-aware background */}
             <div className="pointer-events-none absolute inset-0 -z-10">
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--border))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border))_1px,transparent_1px)] bg-[size:72px_72px] opacity-[0.18]" />
