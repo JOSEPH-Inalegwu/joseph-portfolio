@@ -33,7 +33,7 @@ export const projects: Project[] = [
         demoVideo: {
             src: "/projects/scholaris/Scholaris demo.mp4",
             poster: "/projects/scholaris/scholaris thumbnail.png",
-            duration: "2:15",
+            duration: "1:25",
         },
         howIBuilt: [
             "Architected a scalable schema using Prisma and PostgreSQL to handle complex relationships between students, courses, and grades.",
@@ -53,8 +53,8 @@ export const projects: Project[] = [
         slug: "docket",
         title: "Docket",
         summary: "An intelligent task management dashboard that unifies project tracking, notifications, and team collaboration.",
-        role: "Frontend Engineer",
-        stack: ["Next.js", "TypeScript", "Tailwind CSS", "Redux"],
+        role: "Full-Stack Developer",
+        stack: ["Next.js", "TypeScript", "Tailwind CSS", "Redux", "Prisma", "PostgreSQL", "Supabase"],
         liveUrl: "#",
         coverImage: "/projects/docket/dashboard.png",
         galleryImages: [
@@ -66,7 +66,7 @@ export const projects: Project[] = [
         demoVideo: {
             src: "/projects/docket/Docket Demo.mp4",
             poster: "/projects/docket/dashboard.png",
-            duration: "1:45",
+            duration: "1:24",
         },
         howIBuilt: [
             "Developed a highly interactive dashboard using Redux for global state management of tasks and notifications.",

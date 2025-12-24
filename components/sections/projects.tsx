@@ -17,8 +17,8 @@ export function Projects() {
                     <p className="text-sm font-semibold tracking-wider text-muted-foreground">
                         PORTFOLIO
                     </p>
-                    <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-foreground">
-                        Featured Projects
+                    <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-foreground max-w-3xl mx-auto">
+                        Turning product ideas into fast, usable web experiences
                     </h2>
                     <p className="text-muted-foreground max-w-2xl mx-auto">
                         Real projects. Real code. Real impact.
@@ -83,6 +83,27 @@ export function Projects() {
                             </Card>
                         </article>
                     ))}
+                </div>
+
+                {/* CTA Section */}
+                <div className="mt-16 text-center">
+                    <div className="inline-flex flex-col items-center gap-4 rounded-2xl border border-border bg-muted/30 p-8 sm:p-10">
+                        <h3 className="text-xl font-semibold text-foreground">
+                            Have a project in mind?
+                        </h3>
+                        <p className="max-w-md text-muted-foreground">
+                            I'm available for freelance work and collaborations. Let's discuss how we can build something great together.
+                        </p>
+                        <Button asChild size="lg" className="rounded-full shadow-lg transition-transform hover:scale-105">
+                            <a
+                                href="https://wa.me/2347042482419?text=Hi%20Joseph!%20I%20saw%20your%20portfolio%20and%20I'd%20like%20to%20discuss%20a%20project."
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Start a Project
+                            </a>
+                        </Button>
+                    </div>
                 </div>
             </div>
         </section>
