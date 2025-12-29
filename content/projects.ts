@@ -28,11 +28,16 @@ export const projects: Project[] = [
         role: "Full-stack Developer",
         stack: ["Next.js", "TypeScript", "Prisma", "PostgreSQL"],
         liveUrl: "#",
-        coverImage: "/projects/scholaris/scholaris thumbnail.png",
-        galleryImages: [],
+        coverImage: "/projects/scholaris/scholaris-dashboard.png",
+        galleryImages: [
+            "/projects/scholaris/scholaris-smart-study-planner.png",
+            "/projects/scholaris/scholaris-exam-mode.png",
+            "/projects/scholaris/scholaris-proctected-layout.png",
+            "/projects/scholaris/scholaris-mobile-view.png",
+        ],
         demoVideo: {
             src: "/projects/scholaris/Scholaris demo.mp4",
-            poster: "/projects/scholaris/scholaris thumbnail.png",
+            poster: "/projects/scholaris/scholaris-dashboard.png",
             duration: "1:25",
         },
         howIBuilt: [

@@ -1,6 +1,7 @@
 import { Hero } from "@/components/sections/hero"
 import { Services } from "@/components/sections/services"
 import { Projects } from "@/components/sections/projects"
+import { EducationSkills } from "@/components/sections/education-skills"
 
 export default function Home() {
   return (
@@ -8,14 +9,7 @@ export default function Home() {
       <Hero />
       <Services />
       <Projects />
-
-      {/* Placeholder for Education */}
-      <section id="education" className="py-20 container mx-auto px-4">
-        <div className="space-y-4 text-center">
-          <h2 className="text-3xl font-bold tracking-tight">Education</h2>
-          <p className="text-muted-foreground">Coming soon...</p>
-        </div>
-      </section>
+      <EducationSkills />
 
       {/* Placeholder for Contact */}
       <section id="contact" className="py-20 bg-muted/30">

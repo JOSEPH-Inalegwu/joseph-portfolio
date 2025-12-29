@@ -72,7 +72,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                                     alt={`${project.title} main screenshot`}
                                     fill
                                     priority
-                                    className="object-cover"
+                                    className="object-contain"
                                     sizes="(min-width: 1024px) 900px, 100vw"
                                 />
                             </div>
@@ -128,7 +128,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
                                                             src={src}
                                                             alt={`${project.title} screenshot ${idx + 1}`}
                                                             fill
-                                                            className="object-cover"
+                                                            className="object-contain"
                                                             sizes="(min-width: 1024px) 280px, (min-width: 640px) 45vw, 100vw"
                                                         />
                                                     </div>

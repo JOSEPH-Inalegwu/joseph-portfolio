@@ -38,7 +38,7 @@ export function Projects() {
                                         src={project.coverImage}
                                         alt={project.title}
                                         fill
-                                        className="object-cover transition-transform hover:scale-105 duration-300"
+                                        className="object-contain transition-transform hover:scale-105 duration-300"
                                         sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                                     />
                                 </div>
