@@ -7,7 +7,6 @@ import { ModeToggle } from "@/components/theme/mode-toggle"
 import { Menu, X } from "lucide-react"
 
 const navItems = [
-    { label: "About", href: "#about" },
     { label: "Services", href: "#services" },
     { label: "Projects", href: "#projects" },
     { label: "Education", href: "#education" },

@@ -24,10 +24,10 @@ export const projects: Project[] = [
     {
         slug: "scholaris",
         title: "Scholaris",
-        summary: "A comprehensive course management platform designed to streamline academic workflows for students and faculty.",
+        summary: "AI study assistant launched for my department at Nasarawa State University, now serving 200+ students with v2 expanding to 3 faculties.",
         role: "Full-stack Developer",
-        stack: ["Next.js", "TypeScript", "Prisma", "PostgreSQL"],
-        liveUrl: "#",
+        stack: ["Next.js", "TypeScript", "AI Integration", "Prisma", "PostgreSQL"],
+        liveUrl: "https://scholaris-nsuk.vercel.app",
         coverImage: "/projects/scholaris/scholaris-dashboard.png",
         galleryImages: [
             "/projects/scholaris/scholaris-smart-study-planner.png",
@@ -42,25 +42,26 @@ export const projects: Project[] = [
         },
         howIBuilt: [
             "Architected a scalable schema using Prisma and PostgreSQL to handle complex relationships between students, courses, and grades.",
-            "Implemented secure authentication and role-based access control (RBAC) to differentiate between student and faculty permissions.",
+            "Integrated AI-driven study recommendations to personalize learning paths for each student.",
             "Built a responsive frontend with Next.js and Tailwind CSS, ensuring accessibility across devices.",
         ],
         whatILearned: [
-            "Mastered complex database modeling for many-to-many relationships in an academic context.",
+            "Mastered combining traditional CRUD operations with AI features in a production environment.",
             "Deepened understanding of server-side component patterns in Next.js for improved performance.",
         ],
         impact: [
-            "Reduced course registration time by 40% through an optimized UI flow.",
-            "Centralized academic data, eliminating the need for scattered spreadsheets and manual tracking.",
+            "Served 200+ active students in the initial pilot department launch.",
+            "Reduced exam anxiety and improved study efficiency through personalized planning tools.",
+            "Scaling to 3 additional faculties in v2 based on successful adoption metrics.",
         ],
     },
     {
         slug: "docket",
         title: "Docket",
-        summary: "An intelligent task management dashboard that unifies project tracking, notifications, and team collaboration.",
+        summary: "Unified dashboard for Shopify and Stripe integrations. Built to solve the pain of managing multiple stores across different platforms.",
         role: "Full-Stack Developer",
-        stack: ["Next.js", "TypeScript", "Tailwind CSS", "Redux", "Prisma", "PostgreSQL", "Supabase"],
-        liveUrl: "#",
+        stack: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI", "Prisma", "PostgreSQL", "Supabase", "Stripe", "Shopify"],
+        liveUrl: "https://my-docket.vercel.app",
         coverImage: "/projects/docket/dashboard.png",
         galleryImages: [
             "/projects/docket/Connected Interface.png",

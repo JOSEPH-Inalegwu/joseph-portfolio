@@ -60,17 +60,17 @@ export function Hero() {
 
                             {/* CTAs */}
                             <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-                                {/* Download CV */}
+                                {/* Book a Call */}
                                 <Button asChild className="rounded-full">
-                                    <a href="/Joseph-JI-CV.pdf" download="Joseph-JI-CV.pdf">
-                                        Download CV
+                                    <a href="#contact" className="smooth-scroll">
+                                        Book a Call
                                     </a>
                                 </Button>
 
-                                {/* WhatsApp */}
-                                <Button asChild variant="secondary" className="rounded-full">
-                                    <a href={whatsappURL} target="_blank" rel="noopener noreferrer">
-                                        Let's Talk on WhatsApp
+                                {/* Download CV */}
+                                <Button asChild variant="outline" className="rounded-full">
+                                    <a href="/Joseph-JI-CV.pdf" download="Joseph-JI-CV.pdf">
+                                        Download CV
                                     </a>
                                 </Button>
                             </div>

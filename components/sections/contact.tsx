@@ -122,7 +122,8 @@ export function Contact() {
                         </div>
 
                         <Card className="border-border bg-background/50 p-6 backdrop-blur-sm sm:p-8 min-h-[500px]">
-                            {activeTab === 'message' ? (
+                            {/* Message Form */}
+                            <div className={activeTab === 'message' ? "block" : "hidden"}>
                                 <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col gap-4 animate-in fade-in slide-in-from-bottom-4 duration-300">
                                     <div className="grid gap-4 sm:grid-cols-2">
                                         <div className="space-y-2">
@@ -180,7 +181,10 @@ export function Contact() {
                                         {isSubmitting ? "Sending..." : "Send Message"}
                                     </Button>
                                 </form>
-                            ) : (
+                            </div>
+
+                            {/* Calendar View */}
+                            <div className={activeTab === 'calendar' ? "block" : "hidden"}>
                                 <div className="flex flex-col items-center justify-center h-full gap-4 text-center animate-in fade-in slide-in-from-bottom-4 duration-300">
                                     <div className="mb-2">
                                         <h3 className="text-xl font-semibold">Schedule a meeting</h3>
@@ -195,10 +199,11 @@ export function Contact() {
                                             src="https://cal.com/joseph-jonah-inalegwu-uh2g7p"
                                             style={{ width: "100%", height: "400px", border: "none" }}
                                             title="Book a call with Joseph"
+                                            loading="lazy"
                                         />
                                     </div>
                                 </div>
-                            )}
+                            </div>
                         </Card>
                     </div>
                 </div>
