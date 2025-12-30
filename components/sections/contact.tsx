@@ -1,6 +1,7 @@
 "use client"
 
 import emailjs from "@emailjs/browser"
+import { toast } from "sonner"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import * as z from "zod"
@@ -60,13 +61,13 @@ export function Contact() {
             )
 
             if (result.status === 200) {
-                alert("Message sent successfully!")
+                toast.success("Message sent successfully!")
                 form.reset()
             } else {
-                alert("Failed to send message. Please try again.")
+                toast.error("Failed to send message. Please try again.")
             }
         } catch (error) {
-            alert("An error occurred. Please try again later.")
+            toast.error("An error occurred. Please try again later.")
         } finally {
             setIsSubmitting(false)
         }
