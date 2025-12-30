@@ -3,6 +3,7 @@ import { EducationSkills } from "@/components/sections/education-skills"
 import { Hero } from "@/components/sections/hero"
 import { Projects } from "@/components/sections/projects"
 import { Services } from "@/components/sections/services"
+import { Testimonials } from "@/components/sections/testimonials"
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Hero />
       <Services />
       <Projects />
+      <Testimonials />
       <EducationSkills />
       <Contact />
     </main>
