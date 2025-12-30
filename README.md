@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Joseph's Portfolio (2025)
 
-## Getting Started
+Welcome to my personal portfolio repository. This project showcases my skills, experience, and projects as a Full-Stack Developer, built with modern web technologies.
 
-First, run the development server:
+## 🚀 Live Demo
+
+[View Live Portfolio](#) *(Add your Vercel link here)*
+
+## ✨ Features
+
+- **Modern Hero Section**: High-conversion introductions with "Book a Call" CTA.
+- **Featured Projects**: Detailed project cards with galleries, tech stacks, and impact metrics (e.g., *Scholaris*, *Docket*).
+- **Testimonials**: Social proof section featuring real feedback from students and clients.
+- **Services Showcase**: Clean grid layout displaying core offerings.
+- **Contact Integration**: 
+  - **EmailJS**: Functional contact form for direct messaging.
+  - **Cal.com**: Integrated booking calendar with lazy loading for optimal performance.
+- **Dark Mode**: Fully supported dark/light theme toggling.
+- **Smooth Navigation**: Global smooth scrolling and sticky header padding handling.
+- **Responsive Design**: Mobile-first approach ensuring great UX on all devices.
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js 16](https://nextjs.org/) (App Router)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS 4](https://tailwindcss.com/)
+- **UI Components**: [Shadcn UI](https://ui.shadcn.com/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Forms**: React Hook Form + Zod (Validation)
+- **Email Service**: [EmailJS](https://www.emailjs.com/)
+- **Scheduling**: [Cal.com](https://cal.com/)
+
+## 📂 Project Structure
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+├── app/                  # App Router pages and layout
+│   ├── globals.css       # Global styles (Tailwind, smooth scroll)
+│   ├── layout.tsx        # Root layout with Providers, Navbar, Footer
+│   └── page.tsx          # Homepage composition
+├── components/
+│   ├── layout/           # Navbar, Footer
+│   ├── sections/         # Hero, Projects, Contact, Testimonials, etc.
+│   └── ui/               # Reusable UI components (buttons, cards, inputs)
+├── content/              # Data files for easy content management
+│   ├── projects.ts       # Project data
+│   └── testimonials.ts   # Testimonial data
+└── public/               # Static assets (images, CV)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ⚡ Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Follow these steps to run the project locally.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Prerequisites
 
-## Learn More
+- Node.js 18+ installed
+- npm, pnpm, or yarn
 
-To learn more about Next.js, take a look at the following resources:
+### Installation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1.  **Clone the repository**
+    ```bash
+    git clone https://github.com/yourusername/my_portfolio25.git
+    cd my_portfolio25
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2.  **Install dependencies**
+    ```bash
+    npm install
+    ```
 
-## Deploy on Vercel
+3.  **Run development server**
+    ```bash
+    npm run dev
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4.  **Open locally**
+    Visit [http://localhost:3000](http://localhost:3000) in your browser.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🔐 Environment Variables
+
+To make the Contact form work, create a `.env.local` file (optional for local dev if hardcoded, but recommended for production):
+
+```env
+NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id
+NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_template_id
+NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key
+```
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+Built with ❤️ by **Joseph**.

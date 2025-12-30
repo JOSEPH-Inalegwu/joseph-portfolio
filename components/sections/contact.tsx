@@ -46,17 +46,17 @@ export function Contact() {
 
         try {
             const result = await emailjs.send(
-                "service_u1vnhta",
-                "template_gz2p5fs",
+                process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+                process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
                 {
                     inquiry_type: sanitizedData.subject,
                     from_name: sanitizedData.name,
-                    name: sanitizedData.name, // Sending both just in case
+                    name: sanitizedData.name,
                     from_email: sanitizedData.email,
                     message: sanitizedData.message,
                     time: new Date().toLocaleString(),
                 },
-                "k-vw1CyF3j0S-pf4T"
+                process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
             )
 
             if (result.status === 200) {
