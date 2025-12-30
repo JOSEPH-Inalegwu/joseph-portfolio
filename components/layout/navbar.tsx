@@ -30,6 +30,19 @@ export function Navbar() {
         }
     }, [isOpen])
 
+    const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+        setIsOpen(false);
+        if (href.startsWith("#")) {
+            if (pathname === "/") {
+                e.preventDefault();
+                const element = document.querySelector(href);
+                if (element) {
+                    element.scrollIntoView({ behavior: "smooth" });
+                }
+            }
+        }
+    };
+
     return (
         <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
             <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
@@ -41,27 +54,12 @@ export function Navbar() {
                 {/* Desktop Nav */}
                 <nav className="hidden items-center gap-8 md:flex">
                     {navItems.map((item) => {
-                        const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-                            // Only custom behavior for hash links
-                            if (item.href.startsWith("#")) {
-                                if (pathname === "/") {
-                                    e.preventDefault()
-                                    const element = document.querySelector(item.href)
-                                    if (element) {
-                                        element.scrollIntoView({ behavior: "smooth" })
-                                    }
-                                }
-                            }
-                        }
-
-                        // If not on home, prepend "/" to hash to ensure navigation works
                         const href = pathname === "/" ? item.href : `/${item.href}`
-
                         return (
                             <Link
                                 key={item.href}
                                 href={href}
-                                onClick={handleClick}
+                                onClick={(e) => handleLinkClick(e, item.href)}
                                 className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
                             >
                                 {item.label}
@@ -101,27 +99,30 @@ export function Navbar() {
 
             {/* Mobile Navigation Sidebar - Slides from left */}
             <aside
-                className={`fixed left-0 top-16 z-50 h-[calc(100vh-4rem)] w-72 transform bg-background border-r border-border shadow-2xl transition-transform duration-300 ease-in-out md:hidden ${isOpen ? "translate-x-0" : "-translate-x-full"
+                className={`fixed left-0 top-16 z-50 h-[calc(100vh-4rem)] w-full max-w-xs transform bg-background border-r border-border shadow-2xl transition-transform duration-300 ease-in-out md:hidden ${isOpen ? "translate-x-0" : "-translate-x-full"
                     }`}
             >
                 <nav className="flex flex-col gap-2 p-6">
-                    {navItems.map((item, index) => (
-                        <Link
-                            key={item.href}
-                            href={item.href}
-                            onClick={() => setIsOpen(false)}
-                            className="group relative overflow-hidden rounded-lg px-4 py-3 text-lg font-medium text-foreground transition-colors hover:bg-accent"
-                            style={{
-                                animationDelay: `${index * 50}ms`,
-                                animation: isOpen ? "slideIn 0.3s ease-out forwards" : "none"
-                            }}
-                        >
-                            <span className="relative z-10">
-                                {item.label}
-                            </span>
-                            <div className="absolute inset-0 -left-full bg-gradient-to-r from-transparent via-yellow-500/5 to-transparent transition-all duration-500 group-hover:left-full" />
-                        </Link>
-                    ))}
+                    {navItems.map((item, index) => {
+                        const href = pathname === "/" ? item.href : `/${item.href}`
+                        return (
+                            <Link
+                                key={item.href}
+                                href={href}
+                                onClick={(e) => handleLinkClick(e, item.href)}
+                                className="group relative overflow-hidden rounded-lg px-4 py-3 text-lg font-medium text-foreground transition-colors hover:bg-accent"
+                                style={{
+                                    animationDelay: `${index * 50}ms`,
+                                    animation: isOpen ? "slideIn 0.3s ease-out forwards" : "none"
+                                }}
+                            >
+                                <span className="relative z-10">
+                                    {item.label}
+                                </span>
+                                <div className="absolute inset-0 -left-full bg-gradient-to-r from-transparent via-yellow-500/5 to-transparent transition-all duration-500 group-hover:left-full" />
+                            </Link>
+                        )
+                    })}
                 </nav>
             </aside>
 

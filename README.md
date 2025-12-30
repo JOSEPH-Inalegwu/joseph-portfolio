@@ -4,7 +4,7 @@ Welcome to my personal portfolio repository. This project showcases my skills, e
 
 ## 🚀 Live Demo
 
-[View Live Portfolio](#) *(Add your Vercel link here)*
+[View Live Portfolio](https://joseph-jonah-portfolio.vercel.app)
 
 ## ✨ Features
 
@@ -18,6 +18,17 @@ Welcome to my personal portfolio repository. This project showcases my skills, e
 - **Dark Mode**: Fully supported dark/light theme toggling.
 - **Smooth Navigation**: Global smooth scrolling and sticky header padding handling.
 - **Responsive Design**: Mobile-first approach ensuring great UX on all devices.
+
+## 📸 Gallery
+
+![Hero Section](/projects/screenshots/joseph-portfolio-hero.png)
+*Modern Hero Section with clear CTAs*
+
+![Testimonials Section](/projects/screenshots/joseph-portfolio-testimonial.png)
+*Social Proof with Trust Badges*
+
+![Responsive Mobile View](/projects/screenshots/joseph-portfolio-responsiveness.png)
+*Mobile-First Responsive Design*
 
 ## 🛠️ Tech Stack
 
