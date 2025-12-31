@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://josephjonah.vercel.app",
+    url: "https://joseph-jonah-portfolio.vercel.app",
     title: "Joseph Jonah - Full-Stack Developer Helping Businesses Scale",
     description: "I help businesses scale by building web applications that reach customers beyond geographical boundaries.",
     siteName: "Joseph Jonah Portfolio",
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
 
   // Canonical URL
   alternates: {
-    canonical: "https://josephjonah.vercel.app",
+    canonical: "https://joseph-jonah-portfolio.vercel.app",
   },
 
   // Category
@@ -97,7 +97,7 @@ export default function RootLayout({
               "@type": "Person",
               name: "Joseph Jonah",
               alternateName: "Joseph Jonah",
-              url: "https://josephjonah.vercel.app",
+              url: "https://joseph-jonah-portfolio.vercel.app",
               jobTitle: "Full-Stack Web Developer",
               description: "I help businesses scale by building web applications that reach customers beyond geographical boundaries",
               address: {
