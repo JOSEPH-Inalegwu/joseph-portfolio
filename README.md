@@ -21,13 +21,13 @@ Welcome to my personal portfolio repository. This project showcases my skills, e
 
 ## 📸 Gallery
 
-![Hero Section](/projects/screenshots/joseph-portfolio-hero.png)
+![Hero Section](public/projects/screenshots/joseph-portfolio-hero.png)
 *Modern Hero Section with clear CTAs*
 
-![Testimonials Section](/projects/screenshots/joseph-portfolio-testimonial.png)
+![Testimonials Section](public/projects/screenshots/joseph-portfolio-testimonial.png)
 *Social Proof with Trust Badges*
 
-![Responsive Mobile View](/projects/screenshots/joseph-portfolio-responsiveness.png)
+![Responsive Mobile View](public/projects/screenshots/joseph-portfolio-responsiveness.png)
 *Mobile-First Responsive Design*
 
 ## 🛠️ Tech Stack
